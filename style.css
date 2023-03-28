@@ -1,0 +1,767 @@
+/* GLOBAL */
+
+:root {
+  --header-padding: 55px;
+  --x-small-font-size: 14px;
+  --small-font-size: 16px;
+  --medium-font-size: 18px;
+  --large-font-size: 22px;
+  --primary-color: #0065fc;
+  --secondary-color: #deebff;
+  --tertiary-color: #d9d9d9;
+  --quartary-color: #f2f2f2;
+}
+
+body {
+  font-size: var(--small-font-size);
+  margin: 0 auto;
+  max-width: 1400px;
+  font-family: Raleway;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Raleway;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 5px 10px var(--tertiary-color);
+}
+
+figure a {
+  width: 100%;
+  height: 100%;
+}
+
+figure h3,
+figure p {
+  color: black;
+}
+
+figure .mark {
+  column-gap: 2px;
+}
+
+figure .mark i {
+  font-size: 12px;
+}
+
+i {
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: var(--large-font-size);
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: var(--small-font-size);
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 992px) {
+  .l-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .l-column {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* HEADER */
+
+header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 61px;
+  height: 19px;
+  margin-top: 44px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  column-gap: 21px;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav li {
+  font-size: var(--small-font-size);
+  padding: 48px 24.5px 0 24.5px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav li.selected {
+  box-sizing: border-box;
+  border-top: 2px solid var(--primary-color);
+}
+
+nav li a {
+  color: black;
+}
+
+nav li.selected a {
+  color: var(--primary-color);
+}
+
+header article {
+  margin-top: 63px;
+  width: 100%;
+}
+
+header article h2 {
+  width: 100%;
+}
+
+header article .subtitle {
+  margin-top: 8px;
+}
+
+form {
+  display: inline-flex;
+  flex-direction: row;
+  align-content: center;
+  box-sizing: border-box;
+  border: 1px solid var(--tertiary-color);
+  border-radius: var(--small-font-size);
+  overflow: hidden;
+}
+
+form i {
+  background-color: var(--tertiary-color);
+  color: black;
+  padding: 16px 18px 15px 18px;
+  width: 14px;
+  height: 18px;
+}
+
+form input {
+  border: none;
+  font-size: var(--medium-font-size);
+  padding: 14px 16px 14px 16px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  border: none;
+  background-color: var(--primary-color);
+  height: 100%;
+  color: white;
+  padding: 14px 16px;
+  font-size: var(--medium-font-size);
+}
+
+form button i {
+  display: none !important;
+}
+
+.filters {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.filters h3 {
+  font-size: var(--medium-font-size);
+}
+
+.filters button {
+  align-items: center;
+  background-color: white;
+  border: 2px solid var(--tertiary-color);
+  margin-left: 42px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  padding: 14px 20px;
+}
+
+.filters button span {
+  margin-left: 10px;
+}
+
+.filters button:hover {
+  background-color: var(--secondary-color);
+}
+.filters button i {
+  font-size: 22px;
+}
+
+.filters span {
+  font-size: var(--small-font-size);
+  font-weight: bold;
+}
+
+header .info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 38px;
+  font-size: var(--small-font-size);
+}
+
+header .info i {
+  font-size: 24px;
+}
+
+header .info span {
+  margin-left: 11px;
+}
+
+/* LOGEMENTS SECTION */
+
+.logements {
+  margin-top: 37px;
+  width: 100%;
+}
+
+.logements > * {
+  background-color: var(--quartary-color);
+  border-radius: var(--large-font-size);
+}
+
+.logements figure p {
+  font-size: 14px;
+}
+
+.logements-list {
+  box-sizing: border-box;
+  margin-right: 40px;
+  width: calc(68% - 20px);
+  padding: 42px 40px;
+}
+
+.logements-list h2 {
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 23px;
+}
+
+.logements-cards {
+  margin-top: 23px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 31px;
+  width: 100%;
+  row-gap: 30px;
+}
+
+.logements-card {
+  display: flex;
+  width: calc((99% - 60px) / 3);
+}
+
+.logements-card figure {
+  border-radius: var(--large-font-size);
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logements-cards figure img {
+  border: 5px solid #ffffff;
+  border-top-left-radius: var(--large-font-size);
+  border-top-right-radius: var(--large-font-size);
+  width: 100%;
+  height: 124px;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+.logements-cards figure figcaption {
+  box-sizing: border-box;
+  padding: 4px 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.logements-list figcaption > * {
+  margin: 0;
+  padding: 0;
+}
+
+.logements-list > h3 {
+  margin-top: 0px;
+  padding-top: 30px;
+  font-size: var(--small-font-size);
+  font-weight: bold;
+}
+
+.logements-list p {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.logements .most-popular {
+  justify-content: space-between;
+  width: calc(33% - 20px);
+  padding: 42px 37px;
+  box-sizing: border-box;
+}
+
+.logements .most-popular h2 {
+  margin-bottom: 0px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.logements .most-popular h2 {
+  justify-content: space-between;
+}
+
+.logements .most-popular figure {
+  border-radius: var(--large-font-size);
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.logements .most-popular figure img {
+  box-sizing: border-box;
+  border: 5px solid #ffffff;
+  border-top-left-radius: var(--large-font-size);
+  border-bottom-left-radius: var(--large-font-size);
+  min-width: 40%;
+  max-width: 40%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.logements .most-popular figure figcaption {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logements .most-popular figure .description p {
+  margin: 7px 0;
+}
+
+.logements .most-popular figure figcaption .mark i {
+  margin: 0px 2px;
+  width: 12px;
+  height: 12px;
+}
+
+.void {
+  color: #f2f2f2;
+}
+
+/* ACTIVITIES SECTION */
+
+.activities {
+  margin-top: 60px;
+}
+
+.activities article {
+  justify-content: space-between;
+  column-gap: 40px;
+}
+
+.activities-card {
+  display: flex;
+  width: calc(25% - 40px);
+}
+
+.activities article figure {
+  box-shadow: 0px 5px 10px var(--tertiary-color);
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.activities article figure img {
+  width: 100%;
+  height: 389px;
+  object-fit: cover;
+}
+
+.activities article figcaption {
+  padding: 20px 36px 21px 19px;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 60px;
+  padding-left: 70px;
+  padding-bottom: 46px;
+  background-color: var(--quartary-color);
+  justify-content: flex-start;
+}
+
+footer ul {
+  flex-grow: 1;
+  padding: 0;
+  margin-top: 45px;
+}
+
+footer li:first-child {
+  font-size: var(--medium-font-size);
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+footer li {
+  padding: 6px 0px;
+}
+
+/* TABLETTE */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .m-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .m-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    padding-left: 70px;
+    padding-right: 70px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    margin-top: 44px;
+  }
+
+  .filters {
+    column-gap: 15px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .filters button {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .logements-list {
+    box-sizing: border-box;
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 53px;
+  }
+
+  .logements .most-popular {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .logements .most-popular h2 {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .logements .most-popular h2 {
+    justify-content: space-between;
+  }
+
+  .logements .most-popular .description {
+    column-gap: 23px;
+  }
+
+  .most-popular-card {
+    display: flex;
+    width: calc((99% - 46px) / 3);
+  }
+
+  .logements .most-popular figure {
+    height: 144px;
+    font-size: var(--small-font-size);
+  }
+
+  .logements .most-popular figure figcaption {
+    padding: 12px 4px 12px 10px;
+  }
+
+  .logements .most-popular figure .description {
+    font-size: var(--x-small-font-size);
+  }
+
+  .logements .most-popular figure .description p {
+    font-size: 13px;
+  }
+
+  .logements .most-popular figure img {
+    width: 106px;
+    height: 144px;
+  }
+
+  .activities article {
+    column-gap: 20px;
+  }
+
+  .activities-card {
+    display: flex;
+    width: calc(25% - 20px);
+    height: 267px;
+  }
+
+  .activities article figure img {
+    width: 100%;
+    height: 211px;
+  }
+
+  .activities article figure figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-left: 15px;
+    padding-right: 5px;
+    padding-top: 9px;
+  }
+
+  footer {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .s-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .s-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  header > img {
+    margin: 0;
+    padding: 0;
+    margin-top: 21px;
+    margin-bottom: 48px;
+  }
+
+  header nav {
+    width: 100%;
+    margin: 0;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  nav li {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav li.selected {
+    box-sizing: border-box;
+    padding-bottom: 23px;
+    border-top: none;
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  header article {
+    width: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+  header article h2 {
+    font-size: 22px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 57px;
+    box-sizing: border-box;
+  }
+
+  header article .subtitle {
+    margin-left: 20px;
+  }
+
+  header article form {
+    box-sizing: border-box;
+    margin: 0px 20px;
+  }
+
+  header article form input {
+    width: 100%;
+    flex-grow: 1;
+    padding-right: 5px;
+  }
+
+  header article form button {
+    justify-content: center;
+    align-items: center;
+  }
+
+  header article form button span {
+    display: none;
+  }
+
+  header article form button i {
+    display: inline !important;
+    color: white;
+    background-color: transparent;
+    margin: 0;
+    padding: 0px;
+    width: 17px;
+    height: 17px;
+  }
+
+  header .info {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .filters {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    row-gap: 15px;
+  }
+
+  .filters h3 {
+    width: 100%;
+  }
+
+  .filters button {
+    justify-content: flex-start;
+    margin: 0;
+    padding: 14px 13px;
+    padding-right: 0;
+    width: 48%;
+  }
+
+  .filters button span {
+    font-size: 11px;
+  }
+
+  .logements.s-column {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0;
+  }
+
+  .logements-list,
+  .logements .most-popular {
+    flex: 1;
+    margin: 0;
+    width: 100%;
+  }
+
+  .logements-list {
+    background-color: white;
+    padding: 20px;
+  }
+
+  .logements-list {
+    padding: 20px;
+  }
+
+  .logements-list figure {
+    height: 199px;
+  }
+
+  .logements-list figure figcaption {
+    padding-top: 0px;
+  }
+
+  .logements-list > h3 {
+    display: none;
+  }
+
+  .logements .most-popular {
+    padding: 28px 20px;
+    row-gap: 15px;
+    border-radius: 0;
+  }
+
+  .logements .most-popular h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .logements .most-popular figure {
+    height: 144px;
+  }
+
+  .logements-card {
+    width: 100%;
+  }
+
+  .activities {
+    margin-top: 105px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+  }
+
+  .activities article {
+    row-gap: 24px;
+  }
+
+  .activities-card {
+    display: flex;
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities article figure img {
+    height: 134px;
+  }
+
+  footer {
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+  }
+}
